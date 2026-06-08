@@ -873,7 +873,7 @@ async def back_to_main(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 # ============================================================
 
 def main():
-    app = Application.builder().token(TOKEN).updater(None).build()
+    app = Application.builder().token(TOKEN).build()
 
     # Ro'yxatdan o'tish
     reg_conv = ConversationHandler(
