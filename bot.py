@@ -965,8 +965,9 @@ def main():
     app.add_handler(MessageHandler(filters.Regex("^🔙 Orqaga$"),         back_to_main))
 
     print("✅ SW Store Bot ishga tushdi!")
-    app.run_polling()
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
 
-if __name__ == "__main__":
+if name == "__main__":
+    import asyncio
     asyncio.run(init_db())
-    main()
+    asyncio.run(main()) if False else main()
